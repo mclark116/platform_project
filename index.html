@@ -1,0 +1,162 @@
+<!doctype hmtl>
+<html>
+<head>
+    <link rel="stylesheet" href="builder.css">
+    <script src = "js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1 class = "title">
+        TrackBody
+    </h1>
+    <h2 class = "title">
+        Program Builder
+    </h2>
+    <div id = "container">
+        <form class = "form">
+        <p class = "blockformat">Block</p><div class = "blockformat" id = "block">
+            1
+        </div>
+        <div id = "unordered">
+        <ul id = "addnew">
+            <li class = "border">    
+                <label for="exercise">Exercise</label>
+                <select id="exercise" name="exercise_list"> 
+                    <optgroup label="Lower Body">
+                    <option value="back_squat">Back Squat</option>
+                    <option value="front_squat">Front Squat</option>
+                    <option value="deadlift">Deadlift</option>
+                    
+                    <optgroup label="Upper Body">
+                    <option value="overhead_press">Overhead Press</option>
+                    <option value="bench_press">Bench Press</option>
+                    </optgroup>
+                </select><br>
+            </li>
+
+            <li class = "border">
+                <label for="sets">Sets</label>
+                <select id="sets" name="exercise_list"> 
+                    <optgroup label="">
+                    <option value="one">1</option> 
+                    <option value="two">2</option>
+                    <option value="three">3</option>
+                    <option value="four">4</option>
+                    <option value="five">5</option>
+                    <option value="six">6</option>
+                    <option value="seven">7</option>
+                    <option value="eight">8</option>
+                    <option value="nine">9</option>
+                    <option value="ten">10</option>
+                    </optgroup>
+                </select><br>
+            </li>
+        
+            <li class = "border">
+                <label for="reps">Reps</label>
+                <select id="reps" name="exercise_list"> 
+                    <optgroup label="">
+                    <option value="one">1</option>
+                    <option value="two">2</option>
+                    <option value="three">3</option>
+                    <option value="four">4</option>
+                    <option value="five">5</option>
+                    <option value="six">6</option>
+                    <option value="seven">7</option>
+                    <option value="eight">8</option>
+                    <option value="nine">9</option>
+                    <option value="ten">10</option>
+                    </optgroup>
+                </select><br>
+            </li>
+
+            <li class = "border">
+                <label for="intensity">Intensity</label>
+                <input class="format" type="text" id="intensity" name="intensity" maxlength="10" size="15">
+
+                <select id="exercise" name="exercise_list"> 
+                    <optgroup label="">
+                    <option value="percent">Percent</option>
+                    <option value="pounds">Pounds</option>
+                    <option value="kilograms">Kilograms</option>
+                    <option value="rpe">RPE</option>
+                    <option value="rpe">Velocity</option>
+                    </optgroup>
+                </select><br>
+            </li>
+            </ul>
+            <button id = "combo" class="submit-button" type="button" onclick="addinsideblock();">Add Exercise
+            </button>
+        </div>
+    <button id = "clicker" class="submit-button" type="button" onclick="addnewblock();">Add New Block</button>
+    <button class="submit-button" type="submit">Save</button>
+    </form>
+</body>
+    
+<script>
+const addexercise = document.getElementById('addnew')
+
+const addstuff = document.getElementById("unordered")
+
+function addanotherinsideblock(){
+    let addexercise_two = addstuff.cloneNode(true);
+    addnew.append(addexercise_two);
+}
+
+function addinsideblock(){ 
+  let newlist = addexercise.children;
+  let newlistItem = newlist[0];
+  let newlistCopy = newlistItem.cloneNode(true);
+  //addexercise.appendChild(newlistCopy);
+
+  //let newlist2 = addexercise.children;
+  let newlistItem2 = newlist[1];
+  let newlistCopy2 = newlistItem2.cloneNode(true);
+
+  //let newlist3 = addexercise.children;
+  let newlistItem3 = newlist[2];
+  let newlistCopy3 = newlistItem3.cloneNode(true);
+
+  let newlistItem4 = newlist[3];
+  let newlistCopy4 = newlistItem4.cloneNode(true);
+  //appendhere.append(newlistCopy, newlistCopy2, newlistCopy3, newlistCopy4);
+  addexercise.first().append(newlistCopy, newlistCopy2, newlistCopy3, newlistCopy4);
+
+
+}
+//const list = document.getElementById('addnew');
+let newlist = addexercise.children;
+let newlistItem = newlist[0];
+let newlistCopy = newlistItem.cloneNode(true);
+
+function testrun(){
+    newlistCopy.first().append(list);
+}
+const div = document.getElementById('container');
+
+
+
+function addnewblock() {
+  let forms = div.getElementsByClassName('form');
+  let firstForm = forms[0];
+  let formClone = firstForm.cloneNode(true);
+  formClone.className = "newblock";
+  div.append(formClone);
+}
+
+//const form = document.getElementsByClassName('form')
+
+function addlist() {
+    let stuff = form.getElementById('addnew');
+    let morestuff = stuff[0];
+    let stuffclone = morestuff.cloneNode(true);
+    form.append(stuffclone);
+}
+var chillins = $("ul").children()
+
+$("form").css("background-color", "blue");
+$( "li" ).first().css( "background-color", "red" );
+$( "li" ).last().css( "background-color", "green" );
+$("div").first().css("background-color", "pink");
+</script>
+
+</html>

@@ -1,0 +1,21 @@
+body {background: greenyellow;
+
+}
+
+form {background-color: hotpink;
+
+}
+.form{background-color: indigo;
+}
+
+.format{margin-left: 100px;
+        margin-bottom: 10px;
+        border: 3px solid blue;
+}
+
+.exercise_name{margin-left: 45px;
+
+}
+.size {height: 40px;
+
+}

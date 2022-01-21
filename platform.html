@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="platform.css">
+</head>
+<body>
+    <h1>
+        TrackBody
+    </h1>
+    <form action='' method='post'>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br>
+
+            <div class="format">
+            <label class="exercise_name" for="exercise">Back Squat</label><br>
+                 <input class="form" type="text" id="exercise" name="exercise">
+                <input type="radio" id="kilograms" value="kilograms" name="back_squat_weight">
+                <label for="kilograms">kg</label>
+                <input type="radio" id="pounds" value="pounds" name="back_squat_weight">
+                <label for="pounds">lbs</label><br>
+            </div>
+            <div class="format">
+            <label for="exercise">Front Squat</label><br>
+            <input type="text" id="exercise" name="exercise">
+                <input type="radio" id="kilograms" value="kilograms" name="Front_Squat_Weight">
+                <label for="kilograms">kg</label>
+                <input type="radio" id="pounds" value="pounds" name="Front_Squat_Weight">
+                <label for="pounds">lbs</label><br>
+            </div>
+
+            <div class="format">
+            <label for="exercise">Deadlift</label><br>
+            <input type="text" id="exercise" name="exercise">
+                <input type="radio" id="kilograms" value="kilograms" name="deadlift_weight">
+                <label for="kilograms">kg</label>
+                <input type="radio" id="pounds" value="pounds" name="deadlift_weight">
+                <label for="pounds">lbs</label><br>
+            </div>
+
+            <div class="format">
+            <label for="exercise">Bench Press</label><br>
+            <input type="text" id="exercise" name="exercise">
+                <input type="radio" id="kilograms" value="kilograms" name="bench_press_weight">
+                <label for="kilograms">kg</label>
+                <input type="radio" id="pounds" value="pounds" name="bench_press_weight">
+                <label for="pounds">lbs</label><br>
+            </div>
+
+            <div class="format">
+            <label for="exercise">OH Press</label><br>
+            <input type="text" id="exercise" name="exercise">
+                <input type="radio" id="kilograms" value="kilograms" name="OH_Press_weight">
+                <label for="kilograms">kg</label>
+                <input type="radio" id="pounds" value="pounds" name="OH_Press_weight">
+                <label for="pounds">lbs</label><br>
+            </div>
+
+            <div class="format">
+            <label for="exercise">Clean</label><br>
+            <input type="text" id="exercise" name="exercise">
+                <input type="radio" id="kilograms" value="kilograms" name="clean_weight">
+                <label for="kilograms">kg</label>
+                <input type="radio" id="pounds" value="pounds" name="clean_weight">
+                <label for="pounds">lbs</label><br>
+            </div>
+
+            <div class="format">
+            <label for="exercise">Jerk</label><br>
+            <input type="text" id="exercise" name="exercise">
+                <input type="radio" id="kilograms" value="kilograms" name="jerk_weight">
+                <label for="kilograms">kg</label>
+                <input type="radio" id="pounds" value="pounds" name="jerk_weight">
+                <label for="pounds">lbs</label><br>
+            </div>
+            <div class="format">
+            <label for="exercise">Snatch</label><br>
+            <input type="text" id="exercise" name="exercise">
+                <input class="size" type="radio" id="kilograms" value="kilograms" name="snatch_weight">
+                <label for="kilograms">kg</label>
+                <input type="radio" id="pounds" value="pounds" name="snatch_weight">
+                <label for="pounds">lbs</label><br>
+            </div>
+            <label for="max">Max</label>
+            <input type="text" id="max" name="max"><br>
+
+            <label for="exercise">Exercise</label>
+            <select id="exercise" name="exercise_list"> 
+                <optgroup label="Lower Body">
+                <option value="back_squat">Back Squat</option>
+                    
+                    
+                <option value="front_squat">Front Squat</option>
+                <option value="deadlift">Deadlift</option>
+                </optgroup>
+                <optgroup label="Upper Body">
+                <option value="power_clean">Overhead Press</option>
+                <option value="bench_press">Bench Press</option>
+                </optgroup>
+            </select><br>
+
+            <button class="submit-button" type="submit">Save</button>
+    </form>
+
+</body>
+</html>

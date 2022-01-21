@@ -1,0 +1,115 @@
+<!doctype hmtl>
+<html>
+<head>
+    <link rel="stylesheet" href="builder.css">
+    <script src = "js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1 class = "title">
+        TrackBody
+    </h1>
+    <h2 class = "title">
+        Program Builder
+    </h2>
+    <div id = "container">
+      
+        <form class = "form">
+        <p class = "blockformat">Block</p><div class = "blockformat" id = "block">
+            1
+        </div>
+        <div id = "appendhere">
+        <ul id = "addnew">
+            <li class = "border">    
+                <label for="exercise">Exercise</label>
+                <select id="exercise" name="exercise_list"> 
+                    <optgroup label="Lower Body">
+                    <option value="back_squat">Back Squat</option>
+                    <option value="front_squat">Front Squat</option>
+                    <option value="deadlift">Deadlift</option>
+                    
+                    <optgroup label="Upper Body">
+                    <option value="overhead_press">Overhead Press</option>
+                    <option value="bench_press">Bench Press</option>
+                    </optgroup>
+                </select><br>
+            </li>
+
+            <li class = "border">
+                <label for="sets">Sets</label>
+                <select id="sets" name="exercise_list"> 
+                    <optgroup label="">
+                    <option value="one">1</option> 
+                    <option value="two">2</option>
+                    <option value="three">3</option>
+                    <option value="four">4</option>
+                    <option value="five">5</option>
+                    <option value="six">6</option>
+                    <option value="seven">7</option>
+                    <option value="eight">8</option>
+                    <option value="nine">9</option>
+                    <option value="ten">10</option>
+                    </optgroup>
+                </select><br>
+            </li>
+        
+            <li class = "border">
+                <label for="reps">Reps</label>
+                <select id="reps" name="exercise_list"> 
+                    <optgroup label="">
+                    <option value="one">1</option>
+                    <option value="two">2</option>
+                    <option value="three">3</option>
+                    <option value="four">4</option>
+                    <option value="five">5</option>
+                    <option value="six">6</option>
+                    <option value="seven">7</option>
+                    <option value="eight">8</option>
+                    <option value="nine">9</option>
+                    <option value="ten">10</option>
+                    </optgroup>
+                </select><br>
+            </li>
+
+            <li class = "border">
+                <label for="intensity">Intensity</label>
+                <input class="format" type="text" id="intensity" name="intensity" maxlength="10" size="15">
+
+                <select id="exercise" name="exercise_list"> 
+                    <optgroup label="">
+                    <option value="percent">Percent</option>
+                    <option value="pounds">Pounds</option>
+                    <option value="kilograms">Kilograms</option>
+                    <option value="rpe">RPE</option>
+                    <option value="rpe">Velocity</option>
+                    </optgroup>
+                </select><br>
+            </li>
+            <button id = "combo" class="submit-button" type="button" onclick="addinsideblock();">Add Exercise
+            </button>
+            </ul>
+        </div>
+    
+
+        
+
+    
+    <script>
+    
+ 
+        // 1. Find and store the element we want to listen to events on.
+    //var clickerButton = document.getElementById("clicker");
+    // 2. Define the function that will respond to the event.
+    //var onButtonClick = function() {
+     //   clickerButton.createElement('input');
+    // };
+    // 3. Add the event listener for the element and function
+   // clickerButton.addEventListener("click", onButtonClick);
+  //</script>
+   
+  </div>      
+</form>
+    <button id = "clicker" class="submit-button" type="button" onclick="duplicateForm();">Add New Block</button>
+    <button class="submit-button" type="submit">Save</button>
+    <script src = "js/builder.js"></script>
+</body>
+</html>
