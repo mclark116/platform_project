@@ -13,10 +13,12 @@
     </h2>
     <div id = "container">
         <form id = "form">
+            <div id = "label">
             <p class = "blockformat">Block</p><div class = "blockformat" id = "block">
             1
             </div>
-            <div id = "unordered">
+            </div>
+            <div id = "unordered" class = "matchthis">
                 <div id = "section">
                     <ul id = "addnew">
                         <li class = "border">    
@@ -87,8 +89,8 @@
                     </ul>
                 </div>
             </div>
-        <button id = "combo" class="submit-button" type="button" onclick="addinsideblock();">Add Exercise
-        </button>
+            <button id = "combo" class="matchthis" type="button" onclick="addinsideblock();">Add Exercise
+            </button>
         </form>
     </div>
     
@@ -117,54 +119,122 @@ const saveButton = document.getElementById('save-button');
 
 const div = document.getElementById('container');
 
+const label = document.getElementById('label');
+
 function addanotherinsideblock(){
     let addexercise_two = addstuff.cloneNode(true);
     addnew.append(addexercise_two);
 }
 
+//var something = document.querySelector('[id$="-integer"]').id;
+
+//make this so it is a function called on button click in stead of event listener.
+//let addblock = document.getElementById('clicker');
+  //let int = document.getElementById('block');
+  //let integer = 1;
+  //addblock.addEventListener('click', function(){
+    //integer += 1;
+    //int.innerHTML = '#id' + integer;
+    //**********
+    //int.newid = int + integer;
+
+  //})
+//const addstuffclone = addstuff.cloneNode(false);
+
+var counter = 1;
 function addinsideblock(){ 
+  counter += 1;
   let newul = addexercise.cloneNode(true)
-  let newlist = addexercise.children;
+  //let newlist = addexercise.children;
   //let newlistItem = newlist[0];
   //let newlistCopy = newlistItem.cloneNode(true);
 
   //let newlist2 = addexercise.children;
-  let newlistItem2 = newlist[1];
-  let newlistCopy2 = newlistItem2.cloneNode(true);
+  //let newlistItem2 = newlist[1];
+  //let newlistCopy2 = newlistItem2.cloneNode(true);
 
   //let newlist3 = addexercise.children;
-  let newlistItem3 = newlist[2];
-  let newlistCopy3 = newlistItem3.cloneNode(true);
+  //let newlistItem3 = newlist[2];
+  //let newlistCopy3 = newlistItem3.cloneNode(true);
 
-  let newlistItem4 = newlist[3];
-  let newlistCopy4 = newlistItem4.cloneNode(true);
+  //let newlistItem4 = newlist[3];
+  //let newlistCopy4 = newlistItem4.cloneNode(true);
   //appendhere.append(newlistCopy, newlistCopy2, newlistCopy3, newlistCopy4);
 
   //newul.append(newlistCopy, newlistCopy2, newlistCopy3, newlistCopy4);
   //addexercise.append(newul);
-  newul.id = "superset";
-  addstuff.append(newul);
+  //document.querySelector('[id$="integer"]').id;
+    function integerCount(){
+      integer += 1;
+    }
+
+  let addstuffclone = addstuff.cloneNode(false);
+  let cloneButton = button.cloneNode(true);
+    cloneButton.className += integer;
+    addstuffclone.className += integer;
+
+
+  let parent = $("button[id^='combo']").parent();
+  let target = parent.children("div[id^='unordered']");
+  //let target = parent.children("div[.matchthis']");
+  //*****USE THIS $("#parent > .child")
+
+  newul.id += counter;
+  //$('#unordered').append(newul);
+  //$('#unordered' + integer).append(newul);
+  if (cloneButton.className = addstuffclone.className){
+    //addstuff.append(newul);
+    target.append(newul);
+  }
+
+  //target.append(newul);
+  //addstuff.append(newul);
+
+
+
 }
 //*******Experiment here*********
 //const form = document.getElementsByClassName('form')
 
+//$("#unordered" + integer);
+//$("input[id$=integer]");
+
+
+//for (var i = 0; i < birds.length; i++) {
+  //  if (target.className.matches(cloneButton.className)) {
+
+  //}
+
+
+var integer = 1
+
+function integerCount(){
+    integer += 1;
+}
 function addmoreblocks(){
   let formClone = mainform.cloneNode(false);
   //let p = document.getElementsByClassName("blockformat");
   //let pclone = p.cloneNode(false);
+  //integer +=1
+  integerCount();
+
+  let labelClone = label.cloneNode(true);
+
   let addstuffclone = addstuff.cloneNode(false);
+    addstuffclone.id += integer;
   let addexerciseclone = addexercise.cloneNode(false);
   let sectionClone = section.cloneNode(true);
   let button = document.getElementById('combo');
   let cloneButton = button.cloneNode(true);
+    cloneButton.id += integer;
+    cloneButton.className += integer;
+    addstuffclone.className += integer;
+  addstuffclone.append(sectionClone);
   div.append(formClone);
-  formClone.append(sectionClone, cloneButton);
-  //formClone.append(pclone);
-  //formClone.append(addstuffclone);
-  //formClone.append(addexerciseclone);
+  formClone.append(integer, labelClone, addstuffclone, cloneButton);
+
 }
 
-//const list = document.getElementById('addnew');
 
 
 
@@ -193,11 +263,19 @@ function addlist() {
     form.append(stuffclone);
 }
 
+//give each form a unique id
+//attach the appended ul's to the form that contains the button
 
 $("form").css("background-color", "blue");
 $( "li" ).first().css( "background-color", "red" );
 $( "li" ).last().css( "background-color", "green" );
 $("div").first().css("background-color", "pink");
+$(section).first().css("background-color", "yellow");
+
+//let parent = $("button[id^='combo']").parent();
+//let target = parent.getElementById("div[id^='unordered']")
+$("button[id^='combo']").parent().css("background-color", "purple");
+//$( "button#$'clicker'" ).parent().css( "background-color", "purple");
 </script>
 
 </html>
